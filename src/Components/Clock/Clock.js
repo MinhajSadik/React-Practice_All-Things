@@ -1,7 +1,8 @@
 import React from 'react';
 
 class Clock extends React.Component {
-    // constructor(props) {
+    // when use this props inside this class then use constructor() and super() method otherwise use shortcut just state={date: new Date()}
+    // constructor(props) { 
     //     super(props);
     //     this.state = {date: new Date()}
     // }
@@ -16,7 +17,7 @@ class Clock extends React.Component {
 
     tick() {
         this.setState({
-            date: new Date()
+            date: new Date(), // this.state.date = new Date() never do that 
         });
         }
     
