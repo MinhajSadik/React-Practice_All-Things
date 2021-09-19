@@ -4,7 +4,7 @@ import Clock from './Components/Clock/Clock';
 const App = () => {
     return (
         <div>
-            <Clock local="en-us"/>
+            <Clock />
         </div>
     );
 };
