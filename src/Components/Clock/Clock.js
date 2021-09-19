@@ -6,6 +6,7 @@ class Clock extends React.Component {
     //     super(props);
     //     this.state = {date: new Date()}
     // }
+    
     state = {date: new Date()};
 
     componentDidMount() {
