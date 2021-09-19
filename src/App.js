@@ -4,7 +4,7 @@ import Clock from './Components/Clock/Clock';
 const App = () => {
     return (
         <div>
-            <Clock local="bn-BD"/>
+            <Clock local="en-us"/>
         </div>
     );
 };
