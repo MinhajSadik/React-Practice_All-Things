@@ -1,9 +1,10 @@
 import React from 'react';
+import Clock from './Components/Clock/Clock';
 
 const App = () => {
     return (
         <div>
-            <h1>Hello From App.js</h1>
+            <Clock local="bn-BD"/>
         </div>
     );
 };
