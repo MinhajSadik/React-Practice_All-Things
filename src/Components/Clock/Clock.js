@@ -20,16 +20,23 @@ class Clock extends React.Component {
         this.setState({
             date: new Date(), // this.state.date = new Date() never do that 
         });
-        }
-    
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        this.setState({
+            local:'en-us'
+        });
+    }
 
     render() {
-        const {date} = this.state;
+        const {date, local} = this.state;
         return (
             <div>
                 <h1 className='heading'>
-                    <span className='text'>{date.toLocaleTimeString("bn-BD")}</span>
+                    <span className='text'>{date.toLocaleTimeString(local)}</span>
                 </h1>
+                <button onClick={this.handleClick}>Click Me</button>
             </div>
         );
     }
