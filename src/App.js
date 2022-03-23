@@ -7,11 +7,16 @@ const App = () => {
   return (
     <div>
       <User render={(isLoggedIn) => (isLoggedIn ? "Minaj" : "Sharmina")} />
-      <Counter
+      {/* <Counter
         render={(counter, incrementCount) => (
           <ClickCounter counter={counter} incrementCount={incrementCount} />
         )}
-      />
+      /> */}
+      <Counter>
+        {(counter, incrementCount) => (
+          <ClickCounter counter={counter} incrementCount={incrementCount} />
+        )}
+      </Counter>
     </div>
   );
 };
