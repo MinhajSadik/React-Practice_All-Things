@@ -1,8 +1,10 @@
 import React from "react";
+import User from "./Components/User";
+
 const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <User render={(isLoggedIn) => (isLoggedIn ? "Minaj" : "Sharmina")} />
     </div>
   );
 };
