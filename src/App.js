@@ -1,11 +1,16 @@
 import React from "react";
 import ClickCounter from "./Components/ClickCounter";
 import Counter from "./Components/Counter";
+import Section from "./Components/Section";
 import User from "./Components/User";
-import Section from "./Section";
+import ThemeContext from "./Contexts/themeContext";
 
 class App extends React.Component {
+  state = {
+    theme: "dark",
+  };
   render() {
+    const { theme } = this.state;
     return (
       <div>
         <User render={(isLoggedIn) => (isLoggedIn ? "Minaj" : "Sharmina")} />
@@ -19,7 +24,9 @@ class App extends React.Component {
             <ClickCounter count={counter} incrementCount={incrementCount} />
           )}
         </Counter>
-        <Section />
+        <ThemeContext.Provider value={{ theme }}>
+          <Section />
+        </ThemeContext.Provider>
       </div>
     );
   }
