@@ -8,13 +8,13 @@ import ThemeContext from "./Contexts/themeContext";
 class App extends React.Component {
   state = {
     theme: "light",
+    switchTheme: () => {
+      this.setState((prevState) => ({
+        theme: prevState.theme === "dark" ? "light" : "dark",
+      }));
+    },
   };
 
-  switchTheme = () => {
-    this.setState((prevState) => ({
-      theme: prevState.theme === "dark" ? "light" : "dark",
-    }));
-  };
   render() {
     const { theme } = this.state;
     return (
