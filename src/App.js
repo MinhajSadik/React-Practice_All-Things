@@ -1,4 +1,5 @@
 import React from "react";
+import Calculator from "./Components/Calculator";
 import ClickCounter from "./Components/ClickCounter";
 import Counter from "./Components/Counter";
 import Form from "./Components/Form";
@@ -36,6 +37,9 @@ class App extends React.Component {
         <br />
         <br />
         <Form />
+        <br />
+        <br />
+        <Calculator />
       </div>
     );
   }

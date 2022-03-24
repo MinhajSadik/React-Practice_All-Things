@@ -3,6 +3,7 @@ import React from "react";
 class Form extends React.Component {
   state = {
     title: "javascript",
+    title2: "GoLang",
     text: "javascript is awesome",
     library: "react",
     isAwesome: true,
@@ -29,20 +30,21 @@ class Form extends React.Component {
   };
 
   handleSubmit = (e) => {
-    const { title, text, library, isAwesome } = this.state;
+    const { title, title2, text, library, isAwesome } = this.state;
     e.preventDefault();
-    console.log(title, text, library, isAwesome);
+    console.log(title, title2, text, library, isAwesome);
   };
 
   render() {
-    const { title, text, library, isAwesome } = this.state;
+    const { title, title2, text, library, isAwesome } = this.state;
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <input type="text" value={title} />
           <input
             type="text"
             placeholder="Enter Title"
-            value={title}
+            value={title2}
             onChange={this.handleChange}
           />
           <br />
