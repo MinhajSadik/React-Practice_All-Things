@@ -12,11 +12,7 @@ function Content() {
           return (
             <ThemeContext.Consumer>
               {(theme) => (
-                <HoverCounter
-                  count={counter}
-                  incrementCount={incrementCount}
-                  theme={theme}
-                />
+                <HoverCounter count={counter} incrementCount={incrementCount} />
               )}
             </ThemeContext.Consumer>
           );
