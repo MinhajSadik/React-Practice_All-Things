@@ -1,6 +1,7 @@
 import React from "react";
 import ClickCounter from "./Components/ClickCounter";
 import Counter from "./Components/Counter";
+import Form from "./Components/Form";
 import Section from "./Components/Section";
 import User from "./Components/User";
 import ThemeContext from "./Contexts/themeContext";
@@ -32,6 +33,7 @@ class App extends React.Component {
         <ThemeContext.Provider value={this.state}>
           <Section />
         </ThemeContext.Provider>
+        <Form />
       </div>
     );
   }
