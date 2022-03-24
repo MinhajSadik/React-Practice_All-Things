@@ -16,7 +16,6 @@ class App extends React.Component {
   };
 
   render() {
-    const { theme } = this.state;
     return (
       <div>
         <User render={(isLoggedIn) => (isLoggedIn ? "Minaj" : "Sharmina")} />
@@ -30,7 +29,7 @@ class App extends React.Component {
             <ClickCounter count={counter} incrementCount={incrementCount} />
           )}
         </Counter>
-        <ThemeContext.Provider value={{ theme, switchTheme: this.switchTheme }}>
+        <ThemeContext.Provider value={this.state}>
           <Section />
         </ThemeContext.Provider>
       </div>
