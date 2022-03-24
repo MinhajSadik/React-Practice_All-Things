@@ -33,6 +33,8 @@ class App extends React.Component {
         <ThemeContext.Provider value={this.state}>
           <Section />
         </ThemeContext.Provider>
+        <br />
+        <br />
         <Form />
       </div>
     );
