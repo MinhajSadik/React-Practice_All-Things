@@ -2,6 +2,7 @@ import React from "react";
 import Calculator from "./Components/Calculator";
 import ClickCounter from "./Components/ClickCounter";
 import Counter from "./Components/Counter";
+import Text from "./Components/Inheritance/Text";
 import Section from "./Components/Section";
 import User from "./Components/User";
 import ThemeContext from "./Contexts/themeContext";
@@ -38,6 +39,10 @@ class App extends React.Component {
         {/* <Form /> */}
 
         <Calculator />
+
+        <br />
+        <br />
+        <Text />
       </div>
     );
   }
