@@ -1,5 +1,5 @@
 import React from "react";
-import { toCelsius, toFahrenheit, tryConverter } from "../library/Converter";
+import { toCelsius, toFahrenheit, tryConverter } from "./Functions/Converter";
 import BoilingVerdict from "./BoilingVerdict";
 import TemperatureInput from "./TemperatureInput";
 
