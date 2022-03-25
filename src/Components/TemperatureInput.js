@@ -1,8 +1,10 @@
 import React from "react";
+
 const scaleNames = {
   c: "Celsius",
   f: "Fahrenheit",
 };
+
 function TemperatureInput({ temperature, scale, onTemperatureChange }) {
   return (
     <div>
