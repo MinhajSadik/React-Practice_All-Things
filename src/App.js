@@ -1,6 +1,7 @@
 import React from "react";
 import Calculator from "./Components/Calculator";
 import ClickCounter from "./Components/ClickCounter";
+import Bracket from "./Components/Composition/Bracket";
 import Emoji from "./Components/Composition/Emoji";
 import Text from "./Components/Composition/Text";
 import Counter from "./Components/Counter";
@@ -43,7 +44,15 @@ class App extends React.Component {
 
         <br />
         <br />
-        <Emoji>{({ addEmoji }) => <Text addEmoji={addEmoji} />}</Emoji>
+        <Emoji>
+          {({ addEmoji }) => (
+            <Bracket>
+              {({ addBracket }) => (
+                <Text addEmoji={addEmoji} addBracket={addBracket} />
+              )}
+            </Bracket>
+          )}
+        </Emoji>
       </div>
     );
   }
