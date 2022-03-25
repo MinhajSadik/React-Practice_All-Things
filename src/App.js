@@ -43,9 +43,7 @@ class App extends React.Component {
 
         <br />
         <br />
-        <Emoji>
-          <Text />
-        </Emoji>
+        <Emoji>{({ addEmoji }) => <Text addEmoji={addEmoji} />}</Emoji>
       </div>
     );
   }

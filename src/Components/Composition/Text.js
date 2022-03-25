@@ -1,5 +1,5 @@
 function Text({ addEmoji }) {
-  const text = "i am JavaScript programming Language";
+  const text = "I'm JavaScript Programming Language";
   return <div>{addEmoji ? addEmoji(text, "💩") : text}</div>;
 }
 
