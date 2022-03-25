@@ -1,50 +1,45 @@
 import React from "react";
-import Calculator from "./Components/Calculator";
-import ClickCounter from "./Components/ClickCounter";
-import Bracket from "./Components/Composition/Bracket";
-import Emoji from "./Components/Composition/Emoji";
-import Text from "./Components/Composition/Text";
-import Counter from "./Components/Counter";
-import Section from "./Components/Section";
-import User from "./Components/User";
-import ThemeContext from "./Contexts/themeContext";
+import ClickCounterHOC from "./Components/HOC/ClickCounterHOC";
+import HoverCounterHOC from "./Components/HOC/HoverCounterHOC";
 
 class App extends React.Component {
-  state = {
-    theme: "light",
-    switchTheme: () => {
-      this.setState((prevState) => ({
-        theme: prevState.theme === "dark" ? "light" : "dark",
-      }));
-    },
-  };
+  // state = {
+  //   theme: "light",
+  //   switchTheme: () => {
+  //     this.setState((prevState) => ({
+  //       theme: prevState.theme === "dark" ? "light" : "dark",
+  //     }));
+  //   },
+  // };
 
   render() {
     return (
       <div>
-        <User render={(isLoggedIn) => (isLoggedIn ? "Minaj" : "Sharmina")} />
+        <ClickCounterHOC />
+        <HoverCounterHOC />
+        {/* <User render={(isLoggedIn) => (isLoggedIn ? "Minaj" : "Sharmina")} /> */}
         {/* <Counter
         render={(counter, incrementCount) => (
           <ClickCounter counter={counter} incrementCount={incrementCount} />
         )}
       /> */}
-        <Counter>
+        {/* <Counter>
           {(counter, incrementCount) => (
             <ClickCounter count={counter} incrementCount={incrementCount} />
           )}
-        </Counter>
-        <ThemeContext.Provider value={this.state}>
+        </Counter> */}
+        {/* <ThemeContext.Provider value={this.state}>
           <Section />
-        </ThemeContext.Provider>
+        </ThemeContext.Provider> */}
         <br />
         <br />
         {/* <Form /> */}
 
-        <Calculator />
+        {/* <Calculator /> */}
 
         <br />
         <br />
-        <Emoji>
+        {/* <Emoji>
           {({ addEmoji }) => (
             <Bracket>
               {({ addBracket }) => (
@@ -52,7 +47,7 @@ class App extends React.Component {
               )}
             </Bracket>
           )}
-        </Emoji>
+        </Emoji> */}
       </div>
     );
   }
