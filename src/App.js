@@ -1,6 +1,5 @@
 import React from "react";
-import ClickCounterHOC from "./Components/HOC/ClickCounterHOC";
-import HoverCounterHOC from "./Components/HOC/HoverCounterHOC";
+import Todo from "./Components/Todo";
 
 class App extends React.Component {
   // state = {
@@ -15,8 +14,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <ClickCounterHOC />
-        <HoverCounterHOC />
+        <Todo />
+        {/* <ClickCounterHOC />
+        <HoverCounterHOC /> */}
         {/* <User render={(isLoggedIn) => (isLoggedIn ? "Minaj" : "Sharmina")} /> */}
         {/* <Counter
         render={(counter, incrementCount) => (
