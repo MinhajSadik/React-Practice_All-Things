@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// import App from "./App";
+// ReactDOM.render(<App />, document.getElementById("root"));
 
-let states = []; // state = [{todo: "", warning: ""}]
+//herewith i create an useState hook function for more experienced developers
+let states = [];
 let stateIndex = -1;
 
-//own useState Hook function creation
+//useState hook function
 function useState(defaultValue) {
   const index = ++stateIndex;
 
@@ -45,5 +48,6 @@ function App() {
 }
 
 function renderForUseState() {
+  stateIndex = -1;
   ReactDOM.render(<App />, document.getElementById("root"));
 }
