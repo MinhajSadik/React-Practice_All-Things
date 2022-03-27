@@ -9,7 +9,7 @@ export function useState(defaultValue) {
 
   const setValue = (newValue) => {
     states[index][0] = newValue;
-    renderForUseState();
+    // renderForUseState();
   };
   const returnArray = [defaultValue, setValue];
   states[index] = returnArray;
