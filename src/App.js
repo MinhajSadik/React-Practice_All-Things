@@ -1,7 +1,8 @@
-import React from "react";
-import Counter from "./Components/Counter";
+import React, { useState } from "react";
+import UseEffect from "./Components/UseEffect";
 
-class App extends React.Component {
+function App() {
+  const [show, setShow] = useState(true);
   // state = {
   //   theme: "light",
   //   switchTheme: () => {
@@ -11,35 +12,40 @@ class App extends React.Component {
   //   },
   // };
 
-  render() {
-    return (
-      <div>
-        <Counter />
-        {/* <ClickCounterHOC />
+  return (
+    <div>
+      <div>{show && <UseEffect />}</div>
+      <p>
+        <button type="button" onClick={() => setShow((prevShow) => !prevShow)}>
+          {show ? "Hide" : "Show"}
+        </button>
+      </p>
+      {/* <Counter /> */}
+      {/* <ClickCounterHOC />
         <HoverCounterHOC /> */}
-        {/* <User render={(isLoggedIn) => (isLoggedIn ? "Minaj" : "Sharmina")} /> */}
-        {/* <Counter
+      {/* <User render={(isLoggedIn) => (isLoggedIn ? "Minaj" : "Sharmina")} /> */}
+      {/* <Counter
         render={(counter, incrementCount) => (
           <ClickCounter counter={counter} incrementCount={incrementCount} />
         )}
       /> */}
-        {/* <Counter>
+      {/* <Counter>
           {(counter, incrementCount) => (
             <ClickCounter count={counter} incrementCount={incrementCount} />
           )}
         </Counter> */}
-        {/* <ThemeContext.Provider value={this.state}>
+      {/* <ThemeContext.Provider value={this.state}>
           <Section />
         </ThemeContext.Provider> */}
-        <br />
-        <br />
-        {/* <Form /> */}
+      <br />
+      <br />
+      {/* <Form /> */}
 
-        {/* <Calculator /> */}
+      {/* <Calculator /> */}
 
-        <br />
-        <br />
-        {/* <Emoji>
+      <br />
+      <br />
+      {/* <Emoji>
           {({ addEmoji }) => (
             <Bracket>
               {({ addBracket }) => (
@@ -48,9 +54,8 @@ class App extends React.Component {
             </Bracket>
           )}
         </Emoji> */}
-      </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default App;
