@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 function Todo() {
   const [todo, setTodo] = useState("");
   const [warning, setWarning] = useState(null);
@@ -11,6 +12,7 @@ function Todo() {
     setTodo(inputValue);
     setWarning(updatedWarning);
   };
+
   return (
     <div>
       <h1>This is a Todo</h1>

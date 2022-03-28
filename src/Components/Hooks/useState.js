@@ -1,3 +1,7 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import Todo from "./Components/Todo";
+
 let states = [];
 let stateIndex = -1;
 
@@ -9,9 +13,14 @@ export function useState(defaultValue) {
 
   const setValue = (newValue) => {
     states[index][0] = newValue;
-    // renderForUseState();
+    rerender();
   };
   const returnArray = [defaultValue, setValue];
   states[index] = returnArray;
   return returnArray;
+}
+
+function rerender() {
+  stateIndex = -1;
+  ReactDOM.render(<Todo />, document.getElementById("root"));
 }

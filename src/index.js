@@ -1,5 +1,5 @@
-import App from "./App";
 import ReactDOM from "react-dom";
+import App from "./App";
 ReactDOM.render(<App />, document.getElementById("root"));
 
 //herewith i create an useState hook function for more experienced developers
