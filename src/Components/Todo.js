@@ -6,16 +6,16 @@ function Todo() {
     title: "",
     description: "",
   });
-  const [warning, setWarning] = useState(null);
+  // const [warning, setWarning] = useState(null);
 
-  const handleInput = (e) => {
-    const inputValue = e.target.value;
-    const updatedWarning = inputValue.includes(".js")
-      ? "Warning: .js extension detected"
-      : null;
-    setTodo(inputValue);
-    setWarning(updatedWarning);
-  };
+  // const handleInput = (e) => {
+  //   const inputValue = e.target.value;
+  //   const updatedWarning = inputValue.includes(".js")
+  //     ? "Warning: .js extension detected"
+  //     : null;
+  //   setTodo(inputValue);
+  //   setWarning(updatedWarning);
+  // };
 
   const { title, description } = todo;
 
@@ -46,7 +46,7 @@ function Todo() {
         />
       </p>
       <hr />
-      <h2>{warning || "Good Choice!"}</h2>
+      {/* <h2>{warning || "Good Choice!"}</h2> */}
     </div>
   );
 }
