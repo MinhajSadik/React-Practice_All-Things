@@ -1,5 +1,5 @@
 import React from "react";
-import Todo from "./Components/Todo";
+import Counter from "./Components/Counter";
 
 class App extends React.Component {
   // state = {
@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Todo />
+        <Counter />
         {/* <ClickCounterHOC />
         <HoverCounterHOC /> */}
         {/* <User render={(isLoggedIn) => (isLoggedIn ? "Minaj" : "Sharmina")} /> */}
