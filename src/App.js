@@ -1,27 +1,24 @@
-import React, { useCallback, useMemo, useState } from "react";
-import Button from "./Components/Button";
+import React from "react";
 import FormRef from "./Components/FormRef";
-import ShowCount from "./Components/ShowCount";
-import Tittle from "./Components/Title";
 
 function App() {
   // const [show, setShow] = useState(true);
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
+  // const [count1, setCount1] = useState(0);
+  // const [count2, setCount2] = useState(0);
 
-  const incrementCountByOne = useCallback(() => {
-    setCount1((prevCount) => prevCount + 1);
-  }, []);
+  // const incrementCountByOne = useCallback(() => {
+  //   setCount1((prevCount) => prevCount + 1);
+  // }, []);
 
-  const incrementCountByFive = useCallback(() => {
-    setCount2((prevCount) => prevCount + 5);
-  }, []);
+  // const incrementCountByFive = useCallback(() => {
+  //   setCount2((prevCount) => prevCount + 5);
+  // }, []);
 
-  const isEvenOrOdd = useMemo(() => {
-    let i = 0;
-    while (i < 1000000000) i += 1; // costly operation
-    return count1 % 2 === 0;
-  }, [count1]);
+  // const isEvenOrOdd = useMemo(() => {
+  //   let i = 0;
+  //   while (i < 1000000000) i += 1; // costly operation
+  //   return count1 % 2 === 0;
+  // }, [count1]);
 
   // state = {
   //   theme: "light",
@@ -35,13 +32,13 @@ function App() {
   return (
     <div>
       <FormRef />
-      <Tittle />
+      {/* <Tittle />
       <ShowCount count={count1} title="counter1" />
       <span>{isEvenOrOdd ? "Even" : "Odd"}</span>
       <Button handleClick={incrementCountByOne}>Increment by One</Button>
       <hr />
       <ShowCount count={count2} title="counter2" />
-      <Button handleClick={incrementCountByFive}>Increment by Five</Button>
+      <Button handleClick={incrementCountByFive}>Increment by Five</Button> */}
 
       {/* <div>{show && <UseEffect />}</div>
       <p>
