@@ -1,8 +1,21 @@
 import React, { useState } from "react";
-import UseEffect from "./Components/UseEffect";
+import Button from "./Components/Button";
+import ShowCount from "./Components/ShowCount";
+import Tittle from "./Components/Title";
 
 function App() {
-  const [show, setShow] = useState(true);
+  // const [show, setShow] = useState(true);
+  const [count1, setCount1] = useState(0);
+  const [count2, setCount2] = useState(0);
+
+  const incrementCountByOne = () => {
+    setCount1((prevCount) => prevCount + 1);
+  };
+
+  const incrementCountByFive = () => {
+    setCount2((prevCount) => prevCount + 5);
+  };
+
   // state = {
   //   theme: "light",
   //   switchTheme: () => {
@@ -14,12 +27,19 @@ function App() {
 
   return (
     <div>
-      <div>{show && <UseEffect />}</div>
+      <Tittle />
+      <ShowCount count={count1} title="counter1" />
+      <Button handleClick={incrementCountByOne}>Increment by One</Button>
+      <hr />
+      <ShowCount count={count2} title="counter2" />
+      <Button handleClick={incrementCountByFive}>Increment by Five</Button>
+
+      {/* <div>{show && <UseEffect />}</div>
       <p>
         <button type="button" onClick={() => setShow((prevShow) => !prevShow)}>
           {show ? "Hide" : "Show"}
         </button>
-      </p>
+      </p> */}
       {/* <Counter /> */}
       {/* <ClickCounterHOC />
         <HoverCounterHOC /> */}
