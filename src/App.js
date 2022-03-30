@@ -1,5 +1,5 @@
 import React from "react";
-import FormRef from "./Components/FormRef";
+import Time from "./Components/Time";
 
 function App() {
   // const [show, setShow] = useState(true);
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div>
-      <FormRef />
+      <Time />
       {/* <Tittle />
       <ShowCount count={count1} title="counter1" />
       <span>{isEvenOrOdd ? "Even" : "Odd"}</span>
