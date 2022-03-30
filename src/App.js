@@ -1,5 +1,6 @@
 import React, { useCallback, useMemo, useState } from "react";
 import Button from "./Components/Button";
+import FormRef from "./Components/FormRef";
 import ShowCount from "./Components/ShowCount";
 import Tittle from "./Components/Title";
 
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div>
+      <FormRef />
       <Tittle />
       <ShowCount count={count1} title="counter1" />
       <span>{isEvenOrOdd ? "Even" : "Odd"}</span>
