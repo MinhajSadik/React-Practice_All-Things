@@ -1,5 +1,5 @@
 import React from "react";
-import Time from "./Components/Time";
+import ReducerCouter from "./Components/ReducerCouter";
 
 function App() {
   // const [show, setShow] = useState(true);
@@ -31,7 +31,8 @@ function App() {
 
   return (
     <div>
-      <Time />
+      <ReducerCouter />
+      {/* <Time /> */}
       {/* <Tittle />
       <ShowCount count={count1} title="counter1" />
       <span>{isEvenOrOdd ? "Even" : "Odd"}</span>
