@@ -19,6 +19,14 @@ export default function Time() {
   return (
     <div>
       <p>Time: {date.toLocaleTimeString()}</p>
+      <p>
+        <button
+          type="button"
+          onClick={() => clearInterval(intervalRef.current)}
+        >
+          CleanUp
+        </button>
+      </p>
     </div>
   );
 }
