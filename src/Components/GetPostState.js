@@ -16,12 +16,12 @@ export default function GetPost() {
       .catch((err) => {
         setLoading(false);
         setPost({});
-        setError(err.message);
+        setError("There was a fetching problem");
       });
   }, []);
   return (
     <div>
-      <h1>Posts</h1>
+      <h1>Get Post useState Example</h1>
       <p>{loading ? "Loading..." : post.title}</p>
       <p>{error || null}</p>
     </div>

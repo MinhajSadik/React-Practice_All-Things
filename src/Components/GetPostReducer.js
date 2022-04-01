@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from "react";
+
 const initialState = {
   loading: true,
   post: {},
@@ -40,9 +41,9 @@ export default function GetPostReducer() {
 
   return (
     <div>
-      <h1>Posts</h1>
-      <p>{state.loading ? "Loading..." : state.post.title}</p>
-      <p>{state.error || null}</p>
+      <h1>Get Post Reducer Example</h1>
+      {state.loading ? "Loading..." : state.post.title}
+      {state.error || null}
     </div>
   );
 }
