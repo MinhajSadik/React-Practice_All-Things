@@ -1,5 +1,19 @@
-import React from "react";
-import MultiReducer from "./Components/MultiReducer";
+import { createContext, useReducer } from "react";
+import ComponentA from "./Components/ComponentA";
+
+export const counterContext = createContext();
+
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    default:
+      return state;
+  }
+};
 
 function App() {
   // const [show, setShow] = useState(true);
@@ -29,9 +43,15 @@ function App() {
   //   },
   // };
 
+  const [count, dispatch] = useReducer(reducer, initialState);
+
   return (
     <div>
-      <MultiReducer />
+      <div>Count: {count} </div>
+      <counterContext.Provider value={{ dispatch: dispatch }}>
+        <ComponentA />
+      </counterContext.Provider>
+      {/* <MultiReducer /> */}
       {/* <ReducerCouter /> */}
       {/* <Time /> */}
       {/* <Tittle />
