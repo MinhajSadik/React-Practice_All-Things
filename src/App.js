@@ -1,19 +1,19 @@
-import { createContext, useReducer } from "react";
-import ComponentA from "./Components/ComponentA";
+// import { createContext } from "react";
+import GetPost from "./Components/GetPostState";
 
-export const counterContext = createContext();
+// export const counterContext = createContext();
 
-const initialState = 0;
-const reducer = (state, action) => {
-  switch (action) {
-    case "increment":
-      return state + 1;
-    case "decrement":
-      return state - 1;
-    default:
-      return state;
-  }
-};
+// const initialState = 0;
+// const reducer = (state, action) => {
+//   switch (action) {
+//     case "increment":
+//       return state + 1;
+//     case "decrement":
+//       return state - 1;
+//     default:
+//       return state;
+//   }
+// };
 
 function App() {
   // const [show, setShow] = useState(true);
@@ -43,14 +43,15 @@ function App() {
   //   },
   // };
 
-  const [count, dispatch] = useReducer(reducer, initialState);
+  // const [count, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
-      <div>Count: {count} </div>
+      <GetPost />
+      {/* <div>Count: {count} </div>
       <counterContext.Provider value={{ dispatch: dispatch }}>
         <ComponentA />
-      </counterContext.Provider>
+      </counterContext.Provider> */}
       {/* <MultiReducer /> */}
       {/* <ReducerCouter /> */}
       {/* <Time /> */}
