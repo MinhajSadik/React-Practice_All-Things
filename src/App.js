@@ -1,5 +1,5 @@
 import React from "react";
-import ComplexReducer from "./Components/ComplexReducer";
+import MultiReducer from "./Components/MultiReducer";
 
 function App() {
   // const [show, setShow] = useState(true);
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div>
-      <ComplexReducer />
+      <MultiReducer />
       {/* <ReducerCouter /> */}
       {/* <Time /> */}
       {/* <Tittle />
