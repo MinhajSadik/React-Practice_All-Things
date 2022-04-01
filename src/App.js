@@ -1,6 +1,6 @@
 // import { createContext } from "react";
 
-import GetPostReducer from "./Components/GetPostReducer";
+import Layout from "./Components/Layout";
 
 // export const counterContext = createContext();
 
@@ -48,7 +48,8 @@ function App() {
 
   return (
     <div>
-      <GetPostReducer />
+      <Layout />
+      {/* <GetPostReducer /> */}
       {/* <div>Count: {count} </div>
       <counterContext.Provider value={{ dispatch: dispatch }}>
         <ComponentA />
