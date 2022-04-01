@@ -1,5 +1,5 @@
 import React from "react";
-import ReducerCouter from "./Components/ReducerCouter";
+import ComplexReducer from "./Components/ComplexReducer";
 
 function App() {
   // const [show, setShow] = useState(true);
@@ -31,7 +31,8 @@ function App() {
 
   return (
     <div>
-      <ReducerCouter />
+      <ComplexReducer />
+      {/* <ReducerCouter /> */}
       {/* <Time /> */}
       {/* <Tittle />
       <ShowCount count={count1} title="counter1" />
