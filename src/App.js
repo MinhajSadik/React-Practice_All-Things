@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./ReactRouterDOM/About";
 import Home from "./ReactRouterDOM/Home";
 import Navbar from "./ReactRouterDOM/Navbar";
+import Posts from "./ReactRouterDOM/Posts";
 import Services from "./ReactRouterDOM/Services";
 
 // export const counterContext = createContext();
@@ -57,15 +58,15 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/posts/:id">
-            <Services number="5" />
-          </Route>
-          <Route
+          <Route exact path="/posts/:id" component={Posts} />
+          {/* <Route
             exact
             path="/services"
             render={() => <Services number="5" />}
-          />
-          <Route exact path="/services" component={Services} />
+          /> */}
+          <Route exact path="/services">
+            <Services number="5" />
+          </Route>
           <Route component={() => <h1>404</h1>} />
         </Switch>
       </Router>
