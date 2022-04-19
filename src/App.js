@@ -1,6 +1,9 @@
 // import { createContext } from "react";
 
-import Layout from "./Components/Layout";
+import { Route, Router, Switch } from "react-router-dom";
+import about from "./ReactRouterDOM/About";
+import Home from "./ReactRouterDOM/Home";
+import Navbar from "./ReactRouterDOM/Navbar";
 
 // export const counterContext = createContext();
 
@@ -48,7 +51,15 @@ function App() {
 
   return (
     <div>
-      <Layout />
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={about} />
+        </Switch>
+      </Router>
+
+      {/* <Layout /> */}
       {/* <GetPostReducer /> */}
       {/* <div>Count: {count} </div>
       <counterContext.Provider value={{ dispatch: dispatch }}>
