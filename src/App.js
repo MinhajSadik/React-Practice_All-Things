@@ -1,7 +1,13 @@
 // import { createContext } from "react";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 import About from "./ReactRouterDOM/About";
+import Dashboard from "./ReactRouterDOM/Dashboard";
 import Home from "./ReactRouterDOM/Home";
 import Navbar from "./ReactRouterDOM/Navbar";
 import Posts from "./ReactRouterDOM/Posts";
@@ -22,6 +28,8 @@ import Services from "./ReactRouterDOM/Services";
 // };
 
 function App() {
+  const isLoggedIn = true;
+
   // const [show, setShow] = useState(true);
   // const [count1, setCount1] = useState(0);
   // const [count2, setCount2] = useState(0);
@@ -58,15 +66,19 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/posts/:id" component={Posts} />
-          {/* <Route
+          <Route
             exact
             path="/services"
-            render={() => <Services number="5" />}
-          /> */}
-          <Route exact path="/services">
-            <Services number="5" />
+            render={() => <Services number="51" />}
+          />
+          <Route exact path="/login">
+            {isLoggedIn ? <Redirect to="/dashboard" /> : <Home />}
           </Route>
+          {/* <Route exact path="/services">
+            <Services number="5" />
+          </Route> */}
           <Route component={() => <h1>404</h1>} />
         </Switch>
       </Router>
