@@ -17,6 +17,42 @@ export default function Navbar() {
             Home
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            exact
+            to="/about"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red",
+            }}
+          >
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            exact
+            to="/posts/12"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red",
+            }}
+          >
+            Posts
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            exact
+            to="/services"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red",
+            }}
+          >
+            Services
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
