@@ -28,7 +28,7 @@ import Services from "./ReactRouterDOM/Services";
 // };
 
 function App() {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   // const [show, setShow] = useState(true);
   // const [count1, setCount1] = useState(0);
@@ -67,7 +67,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/posts/:id" component={Posts} />
+          <Route exact path="/posts/:category/:topic" component={Posts} />
           <Route
             exact
             path="/services"

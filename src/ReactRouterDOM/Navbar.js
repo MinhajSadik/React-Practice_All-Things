@@ -32,7 +32,7 @@ export default function Navbar() {
         <li>
           <NavLink
             exact
-            to="/posts/12"
+            to="/posts/javascript/react"
             activeStyle={{
               fontWeight: "bold",
               color: "red",
