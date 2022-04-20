@@ -1,17 +1,11 @@
 // import { createContext } from "react";
 
-import {
-  BrowserRouter as Router,
-  Redirect,
-  Route,
-  Switch,
-} from "react-router-dom";
-import About from "./ReactRouterDOM/About";
-import Dashboard from "./ReactRouterDOM/Dashboard";
-import Home from "./ReactRouterDOM/Home";
-import Navbar from "./ReactRouterDOM/Navbar";
-import Posts from "./ReactRouterDOM/Posts";
-import Services from "./ReactRouterDOM/Services";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./ReactRouterDOMv6/Header";
+import Hello from "./ReactRouterDOMv6/Hello";
+import Home from "./ReactRouterDOMv6/Home";
+import Post from "./ReactRouterDOMv6/Post";
+import Posts from "./ReactRouterDOMv6/Posts";
 
 // export const counterContext = createContext();
 
@@ -28,7 +22,7 @@ import Services from "./ReactRouterDOM/Services";
 // };
 
 function App() {
-  const isLoggedIn = false;
+  // const isLoggedIn = false;
 
   // const [show, setShow] = useState(true);
   // const [count1, setCount1] = useState(0);
@@ -62,6 +56,21 @@ function App() {
   return (
     <div>
       <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/post" element={<Post />} />
+          <Route path="/hello/*" element={<Hello />}>
+            <Route
+              path="programmers"
+              element={<p>This is programmers page</p>}
+            />
+          </Route>
+          <Route path="/posts" element={<Posts />} />
+        </Routes>
+      </Router>
+
+      {/* <Router>
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -76,12 +85,12 @@ function App() {
           <Route exact path="/login">
             {isLoggedIn ? <Redirect to="/dashboard" /> : <Home />}
           </Route>
-          {/* <Route exact path="/services">
+           <Route exact path="/services">
             <Services number="5" />
-          </Route> */}
-          <Route component={() => <h1>404</h1>} />
-        </Switch>
-      </Router>
+          </Route> 
+       <Route component={() => <h1>404</h1>} />
+      </Switch>
+     </Router> */}
 
       {/* <Layout /> */}
       {/* <GetPostReducer /> */}
@@ -99,7 +108,6 @@ function App() {
       <hr />
       <ShowCount count={count2} title="counter2" />
       <Button handleClick={incrementCountByFive}>Increment by Five</Button> */}
-
       {/* <div>{show && <UseEffect />}</div>
       <p>
         <button type="button" onClick={() => setShow((prevShow) => !prevShow)}>
@@ -126,9 +134,7 @@ function App() {
       <br />
       <br />
       {/* <Form /> */}
-
       {/* <Calculator /> */}
-
       <br />
       <br />
       {/* <Emoji>
