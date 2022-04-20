@@ -1,12 +1,12 @@
 // import { createContext } from "react";
 
-import { Route, Router, Routes } from "react-router-dom";
-import Dashboard from "./PrivateRoute/Dashboard";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./PrivateRoute/Header";
 import Home from "./PrivateRoute/Home";
 import HomePage from "./PrivateRoute/HomePage";
 import Login from "./PrivateRoute/Login";
-import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import PrivateOutlet from "./PrivateRoute/PrivateOutlet";
+import Dashboard from "./ReactRouterDOMv5/Dashboard";
 
 // export const counterContext = createContext();
 
@@ -61,15 +61,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route
-            path="/dashboard"
-            element={
-              <PrivateRoute>
-                <Dashboard />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/*" element={<PrivateOutlet />}>
+            <Route path="dashboard" element={<Dashboard />} />
+          </Route>
         </Routes>
       </Router>
 
