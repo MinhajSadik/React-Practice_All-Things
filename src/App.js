@@ -1,11 +1,12 @@
 // import { createContext } from "react";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./ReactRouterDOMv6/Header";
-import Hello from "./ReactRouterDOMv6/Hello";
-import Home from "./ReactRouterDOMv6/Home";
-import Post from "./ReactRouterDOMv6/Post";
-import Posts from "./ReactRouterDOMv6/Posts";
+import { Route, Router, Routes } from "react-router-dom";
+import Dashboard from "./PrivateRoute/Dashboard";
+import Header from "./PrivateRoute/Header";
+import Home from "./PrivateRoute/Home";
+import HomePage from "./PrivateRoute/HomePage";
+import Login from "./PrivateRoute/Login";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 // export const counterContext = createContext();
 
@@ -59,6 +60,23 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+      </Router>
+
+      {/* <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/post" element={<Post />} />
           <Route path="/hello/*" element={<Hello />}>
             <Route
@@ -68,7 +86,7 @@ function App() {
           </Route>
           <Route path="/posts" element={<Posts />} />
         </Routes>
-      </Router>
+      </Router> */}
 
       {/* <Router>
         <Navbar />
