@@ -1,6 +1,6 @@
 // import { createContext } from "react";
 
-import { Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Dashboard from "./PrivateRoute/Dashboard";
 import Header from "./PrivateRoute/Header";
 import Home from "./PrivateRoute/Home";
@@ -61,7 +61,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/homepage" element={<HomePage />} />
           <Route
             path="/dashboard"
             element={
